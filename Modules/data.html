@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organize and Analyze Research Data</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>How to Organize and Analyze Research Data</h1>
+    <nav><a href="../index.html">Back to Home</a></nav>
+  </header>
+  <main>
+    <aside>
+      <h2>For this lesson, you'll need:</h2>
+      <ul>
+        <li>Microsoft Excel</li>
+        <li>PASW statistics software (or free trial)</li>
+      </ul>
+      <h3>Prerequisites:</h3>
+      <ul>
+        <li>Basic Excel functionality</li>
+        <li>Descriptive & inferential statistics</li>
+        <li>Understanding IVs and DVs</li>
+      </ul>
+    </aside>
+
+    <section>
+      <h2>Lesson Outcomes</h2>
+      <ul>
+        <li>Format research data in Excel</li>
+        <li>Run descriptive statistics in Excel</li>
+        <li>Prepare data for PASW</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Format Data for Analysis</h2>
+      <p>Open ToolBox_DataLesson.xls. In the <strong>Raw_Dataset</strong> tab:</p>
+      <ul>
+        <li>Ensure all variable names are unique</li>
+        <li>Fix invalid variable names (e.g. <code>4tutorial_types</code> → <code>tutorial_types</code>)</li>
+        <li>Rename columns for clarity</li>
+      </ul>
+      <figure>
+        <img src="../images/datalesson_fig3.png" alt="Formatted Categorical Variables" />
+        <figcaption>Tutorial type, gender, experience, and tasks formatted as dichotomous variables.</figcaption>
+      </figure>
+
+      <p>Format data entries consistently, and split compound fields into separate columns (e.g. tasks_completed → task1, task2, task3). Use 0/1 for dichotomous values.</p>
+      <figure>
+        <img src="../images/datalesson_fig2.png" alt="Consistent Data Formatting" />
+        <figcaption>Consistent value formatting for each variable.</figcaption>
+      </figure>
+
+      <aside>
+        <p>Dichotomous variables enable isolation for comparative analysis in PASW.</p>
+      </aside>
+
+      <p>Copy data to <strong>Sheet2</strong>, rename it <strong>Formatted_Data</strong>, and add new columns per categorical value.</p>
+    </section>
+
+    <section>
+      <h2>Run Descriptive Statistics</h2>
+      <aside>
+        <p>Example insight: perc_enjoy > perc_usefulness with high variance → possible disengaged segment.</p>
+      </aside>
+      <ol>
+        <li>Highlight continuous values (e.g., perc_enjoy to perc_ease_of_use)</li>
+        <li>Tools > Add-Ins → Enable Analysis ToolPak</li>
+        <li>Tools > Data Analysis > Descriptive Statistics → Select range → Output to new sheet</li>
+      </ol>
+      <figure>
+        <img src="../images/datalesson_fig4.png" alt="Descriptive Stats Output" />
+        <figcaption>Use numeric-only input to run Excel's descriptive statistics.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Run Inferential Statistics</h2>
+      <ol>
+        <li>Open PASW → Load Excel file → Select <strong>Formatted_Data</strong></li>
+        <li>Analyze menu → Explore Wilcoxon-Mann-Whitney, Linear Regression, Correlation</li>
+        <li>Use Kruskal-Wallis test: Analyze > Nonparametric Tests > K Independent Samples</li>
+      </ol>
+
+      <figure>
+        <img src="../images/datalesson_fig6.png" alt="Kruskal-Wallis Setup" />
+        <figcaption>Select dependent (perc_usefulness) and independent (free_play) variables</figcaption>
+      </figure>
+
+      <p>Export results to Word, PDF, etc. File > Export → Choose format</p>
+      <figure>
+        <img src="../images/datalesson_fig7.png" alt="Export PASW Output" />
+        <figcaption>Export statistical results for reporting.</figcaption>
+      </figure>
+
+      <aside>
+        <p>Use UCLA's "Choosing the Correct Statistic" to guide statistical choices.</p>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
